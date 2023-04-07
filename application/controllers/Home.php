@@ -6,7 +6,11 @@ class Home extends CI_Controller {
 
     public function index()
     {
-        $this->load->view('v_home');
+        $data = array(
+            'title' => 'Web Sekolah',
+            'isi'   => 'v_home'
+        );
+        $this->load->view('layout/v_wrapper',$data,FALSE);
     }
 
 }
