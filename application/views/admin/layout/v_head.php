@@ -15,6 +15,13 @@
         <!-- MetisMenu CSS -->
         <link href="<?= base_url(); ?>template/back-end/css/metisMenu.min.css" rel="stylesheet">
 
+        <!-- DataTables CSS -->
+        <link href="<?= base_url(); ?>template/back-end/css/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+
+        <!-- DataTables Responsive CSS -->
+        <link href="<?= base_url(); ?>template/back-end/css/dataTables/dataTables.responsive.css" rel="stylesheet">
+
+
         <!-- Custom CSS -->
         <link href="<?= base_url(); ?>template/back-end/css/startmin.css" rel="stylesheet">
 
