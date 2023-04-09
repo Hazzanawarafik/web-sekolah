@@ -18,7 +18,8 @@
                 <ul class="nav navbar-right navbar-top-links">
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            <i class="fa fa-user fa-fw"></i> Nama User 
+                            <i class="fa fa-user fa-fw"></i> <?= $this->session->userdata('nama_user'); ?> 
                         </a>
                     </li>
                 </ul>
+                
