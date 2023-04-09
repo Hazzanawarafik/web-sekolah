@@ -11,6 +11,10 @@ class M_mapel extends CI_Model {
         return $this->db->get()->result();
     }
 
+    public function add($data){
+        $this->db->insert('tbl_mapel', $data);
+    }
+
 }
 
 /* End of file M_mapel.php */

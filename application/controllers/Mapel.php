@@ -22,6 +22,15 @@ class Mapel extends CI_Controller {
         $this->load->view('admin/layout/v_wrapper',$data,FALSE);
     }
 
+    public function add(){
+        $data = array(
+            'nama_mapel' => $this->input->post('nama_mapel')
+        );
+        $this->m_mapel->add($data);
+        $this->session->set_flashdata('pesan','Data Berhasil Ditambahkan !!!');
+        redirect('mapel');
+    }
+
 }
 
 /* End of file Mapel.php */
