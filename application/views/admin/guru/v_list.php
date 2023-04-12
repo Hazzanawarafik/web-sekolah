@@ -1,7 +1,7 @@
 <div class="col-lg-12">
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus"></i> Add</button>
+            <a href="<?= base_url('guru/add'); ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Add</a>
         </div>
         <div class="panel-body">
             <?php 
