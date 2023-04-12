@@ -21,7 +21,7 @@
                                 <a href="<?= base_url('mapel'); ?>"><i class="fa fa-bar-chart-o fa-fw"></i> Mata Pelajaran</a>
                             </li>
                             <li>
-                                <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
+                                <a href="<?= base_url('guru'); ?>"><i class="fa fa-users fa-fw"></i> Guru</a>
                             </li>
                             <li>
                                 <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
