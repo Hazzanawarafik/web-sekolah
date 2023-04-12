@@ -27,8 +27,8 @@
                             <td><?= $no++; ?></td>
                             <td><?= $value->nama_mapel; ?></td>
                             <td>
-                                <a href="" class="btn btn-xs btn-success"><i class="fa fa-pencil"></i> Edit</a>
-                                <a href="" class="btn btn-xs btn-danger"><i class="fa fa-trash"></i> Delete</a>
+                                <button class="btn btn-xs btn-success"  data-toggle="modal" data-target="#edit<?= $value->id_mapel; ?>"><i class="fa fa-pencil"></i> Edit</button>
+                                <a href="<?= base_url('mapel/delete/'. $value->id_mapel); ?>" onclick="return confirm('Apakah Data Ini Akan Dihapus..?')" class="btn btn-xs btn-danger"><i class="fa fa-trash"></i> Delete</a>
                             </td>
                         </tr>
                     <?php endforeach ?>
@@ -64,3 +64,31 @@
     <!-- /.modal-dialog -->
 </div>
 <!-- /.modal -->
+<?php foreach($mapel as $key => $value) : ?>
+    <!-- Modal -->
+    <div class="modal fade" id="edit<?= $value->id_mapel; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Edit Mata Pelajaran</h4>
+            </div>
+            <div class="modal-body">
+                <?php echo form_open('mapel/edit/'.$value->id_mapel); ?>
+                <div class="form-group">
+                    <label>Mata Pelajaran</label>
+                    <input class="form-control" type="text" value="<?= $value->nama_mapel; ?>" name="nama_mapel" placeholder="Mata Pelajaran">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+            <?php echo form_close(); ?>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<?php endforeach ?>

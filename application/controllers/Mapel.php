@@ -31,6 +31,25 @@ class Mapel extends CI_Controller {
         redirect('mapel');
     }
 
+    public function edit($id_mapel){
+        $data = array(
+            'id_mapel' => $id_mapel,
+            'nama_mapel' => $this->input->post('nama_mapel'),
+        );
+        $this->m_mapel->edit($data);
+        $this->session->set_flashdata('pesan','Data Berhasil Diupdate !!!');
+        redirect('mapel');
+    }
+
+    public function delete($id_mapel){
+        $data = array(
+            'id_mapel' => $id_mapel,
+        );
+        $this->m_mapel->delete($data);
+        $this->session->set_flashdata('pesan','Data Berhasil Dihapus !!!');
+        redirect('mapel');
+    }
+
 }
 
 /* End of file Mapel.php */
