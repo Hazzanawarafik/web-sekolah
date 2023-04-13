@@ -37,7 +37,7 @@
                             <td><?= $value->tgl_lahir; ?></td>
                             <td><?= $value->nama_mapel; ?></td>
                             <td><?= $value->pendidikan; ?></td>
-                            <td><?= $value->foto_guru; ?></td>
+                            <td><img src="<?= base_url('foto_guru/'.$value->foto_guru); ?>" width="100px" alt=""></td>
                             <td>
                                 <a href="<?= base_url('guru/edit/'. $value->id_guru); ?>" class="btn btn-xs btn-success"><i class="fa fa-pencil"></i></a>
                                 <a href="<?= base_url('guru/delete/'. $value->id_guru); ?>" onclick="return confirm('Apakah Data Ini Akan Dihapus..?')" class="btn btn-xs btn-danger"><i class="fa fa-trash"></i></a>

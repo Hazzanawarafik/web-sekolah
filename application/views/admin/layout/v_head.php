@@ -11,6 +11,7 @@
 
         <!-- Bootstrap Core CSS -->
         <link href="<?= base_url(); ?>template/back-end/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="<?= base_url() ?>datepicker/css/datepicker.css">
 
         <!-- MetisMenu CSS -->
         <link href="<?= base_url(); ?>template/back-end/css/metisMenu.min.css" rel="stylesheet">
@@ -27,6 +28,11 @@
 
         <!-- Custom Fonts -->
         <link href="<?= base_url(); ?>template/back-end/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+         <style>
+		.datepicker{z-index:1151;}
+	    </style>
+	    
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

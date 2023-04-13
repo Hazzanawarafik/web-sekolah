@@ -4,7 +4,12 @@
             Add Data
         </div>
         <div class="panel-body">
-            <?php echo form_open_multipart('guru/add') ?>
+            <?php 
+            if(isset($error_upload)){
+                echo '<div class="alert alert-danger alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'.$error_uplaod.'</div>';
+            }
+            echo form_open_multipart('guru/add') ?>
             <div class="form-group">
                 <label for="">NIP</label>
                 <input type="text" class="form-control" name="nip" placeholder="NIP" required>
@@ -22,13 +27,13 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="">Tanggal Lahir</label>
-                    <input type="text" class="form-control" name="tgl_lahir" placeholder="Tanggal Lahir" required >
+                    <input type="text" class="form-control" name="tgl_lahir" id="tanggal" placeholder="Tanggal Lahir" required >
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="">Mata Pelajaran</label>
-                    <select name="mapel" id="" class="form-control">
+                    <select name="id_mapel" id="" class="form-control">
                         <option value="">--Pilih Mata Pelajaran--</option>
                         <?php foreach($mapel as $key => $value) : ?>
                             <option value="<?= $value->id_mapel; ?>"><?= $value->nama_mapel; ?></option>
@@ -39,7 +44,7 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="">Pendidikan</label>
-                    <select name="mapel" id="" class="form-control">
+                    <select name="pendidikan" id="" class="form-control">
                         <option value="">--Pilih Pendidikan--</option>
                         <option value="D3">D3</option>
                         <option value="S1">S1</option>

@@ -12,6 +12,9 @@ class M_guru extends CI_Model {
         return $this->db->get()->result();
     }
 
+    public function add($data){
+        $this->db->insert('tbl_guru',$data);  
+    }
 }
 
 /* End of file M_guru.php */
