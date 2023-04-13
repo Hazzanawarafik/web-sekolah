@@ -28,6 +28,11 @@ class M_guru extends CI_Model {
         $this->db->where('id_guru',$data['id_guru']);
         $this->db->update('tbl_guru',$data);
     }
+
+    public function delete($data){
+        $this->db->where('id_guru',$data['id_guru']);
+        $this->db->delete('tbl_guru',$data);
+    }
 }
 
 /* End of file M_guru.php */

@@ -161,6 +161,20 @@ class Guru extends CI_Controller {
         $this->load->view('admin/layout/v_wrapper',$data,FALSE);
     }
 
+    public function delete($id_guru){
+        //menghapus file foto lama
+        $guru = $this->m_guru->detail($id_guru);
+        if($guru->foto_guru != ""){
+            unlink('./foto_guru/'.$guru->foto_guru);
+        }
+        // end menghapus foto
+
+        $data = array('id_guru' => $id_guru);
+        $this->m_guru->delete($data);
+        $this->session->set_flashdata('pesan','Data Berhasil Di Hapus !!!');
+        redirect('guru');
+    }
+
 }
 
 /* End of file Guru.php */

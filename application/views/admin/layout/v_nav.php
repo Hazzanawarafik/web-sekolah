@@ -24,6 +24,9 @@
                                 <a href="<?= base_url('guru'); ?>"><i class="fa fa-users fa-fw"></i> Guru</a>
                             </li>
                             <li>
+                                <a href="<?= base_url('siswa'); ?>"><i class="fa fa-mortar-board fa-fw"></i> Siswa</a>
+                            </li>
+                            <li>
                                 <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
                             </li>
                             <li>
