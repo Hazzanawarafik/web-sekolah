@@ -14,7 +14,6 @@ class M_siswa extends CI_Model {
     public function detail($id_siswa){
         $this->db->select('*');
         $this->db->from('tbl_siswa');
-        $this->db->join('tbl_mapel','tbl_mapel.id_mapel = tbl_siswa.id_mapel','left');
         $this->db->where('id_siswa',$id_siswa);
         return $this->db->get()->row();
     }

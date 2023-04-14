@@ -37,8 +37,8 @@
                             <td><?= $value->kelas; ?></td>
                             <td><img src="<?= base_url('foto_siswa/'.$value->foto_siswa); ?>" width="100px" alt=""></td>
                             <td>
-                                <a href="<?= base_url('guru/edit/'. $value->id_siswa); ?>" class="btn btn-xs btn-success"><i class="fa fa-pencil"></i></a>
-                                <a href="<?= base_url('guru/delete/'. $value->id_siswa); ?>" onclick="return confirm('Apakah Data Ini Akan Dihapus..?')" class="btn btn-xs btn-danger"><i class="fa fa-trash"></i></a>
+                                <a href="<?= base_url('siswa/edit/'. $value->id_siswa); ?>" class="btn btn-xs btn-success"><i class="fa fa-pencil"></i></a>
+                                <a href="<?= base_url('siswa/delete/'. $value->id_siswa); ?>" onclick="return confirm('Apakah Data Ini Akan Dihapus..?')" class="btn btn-xs btn-danger"><i class="fa fa-trash"></i></a>
                             </td>
                         </tr>
                     <?php endforeach ?>

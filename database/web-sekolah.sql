@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 5.1.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Waktu pembuatan: 13 Apr 2023 pada 08.36
--- Versi server: 10.1.37-MariaDB
--- Versi PHP: 7.3.0
+-- Host: localhost:3306
+-- Waktu pembuatan: 14 Apr 2023 pada 14.32
+-- Versi server: 5.7.24
+-- Versi PHP: 7.3.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -127,8 +126,22 @@ CREATE TABLE `tbl_siswa` (
   `tempat_lahir` varchar(15) DEFAULT NULL,
   `tgl_lahir` date DEFAULT NULL,
   `kelas` varchar(10) DEFAULT NULL,
-  `foto_siswa` varchar(30) DEFAULT NULL
+  `foto_siswa` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tbl_siswa`
+--
+
+INSERT INTO `tbl_siswa` (`id_siswa`, `nis`, `nama_siswa`, `tempat_lahir`, `tgl_lahir`, `kelas`, `foto_siswa`) VALUES
+(1, 'h6MUgP7Neu', 'mGe3OQAsCT', 'DAE18mIcgB', '2015-07-08', 'c8LFOINlw6', 'M871FTHhlF'),
+(2, '7KCWErJ6v2', 'HdB3EAIxPx', 'ISgvO07gCx', '2023-02-19', 'GCJkvYBYBF', 'PICmAkvjHR'),
+(3, 'M5z0Un8WUx', 'ZoPoyuBmmR', 'M2r1U9B1ew', '2022-12-12', 'kNoBsrv7E9', 'VE6AAjaRBg'),
+(4, 'CzOFdx0JBz', 'zEergrlagZ', 'cMXCRVxRD9', '2003-10-03', 'Wl8ovYjCI8', 'ryqIi1UjXg'),
+(5, 'CJfqYg2HfY', 'pbdrpPdRy8', 'WdOPFMyGOl', '2022-11-18', 'xoCnhESage', 'tLtfXtGCj6'),
+(6, 'y43Jk4YzX7', 'Edx4e4iodd', 'C0S1UvAE3U', '2014-09-16', 'ny8p1jc6EI', 'JUgSeyRPJW'),
+(7, '1222212', 'Rafi', 'v9GKheL5ZK', '2013-05-29', 'sn4PAkn7Ol', 'aigami.jpg'),
+(9, '11111', 'Hazza', 'kWU5eAO5GV', '2019-10-03', 'kVSsT9vkwR', '9990_foto_1659942666.jpg');
 
 -- --------------------------------------------------------
 
@@ -150,7 +163,7 @@ CREATE TABLE `tbl_user` (
 
 INSERT INTO `tbl_user` (`id_user`, `nama_user`, `username`, `password`, `level`) VALUES
 (1, 'Hazza', 'admin', 'admin', 1),
-(2, 'Rafi', NULL, NULL, NULL);
+(2, 'Rafi', 'user', 'user', NULL);
 
 --
 -- Indexes for dumped tables
@@ -236,7 +249,7 @@ ALTER TABLE `tbl_pengumuman`
 -- AUTO_INCREMENT untuk tabel `tbl_siswa`
 --
 ALTER TABLE `tbl_siswa`
-  MODIFY `id_siswa` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_siswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_user`
