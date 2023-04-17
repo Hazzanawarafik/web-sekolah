@@ -32,7 +32,7 @@
                             <td><?= $value->judul_berita; ?></td>
                             <td><?= $value->slug_berita; ?></td>
                             <td><?= $value->tgl_berita; ?></td>
-                            <td><?= $value->gambar_berita; ?></td>
+                            <td><img src="<?= base_url('gambar_berita/'.$value->gambar_berita); ?>" width="150px" alt=""></td>
                             <td><?= $value->nama_user; ?></td>
                             <td>
                                 <a href="<?= base_url('berita/edit/'. $value->id_berita); ?>" class="btn btn-xs btn-success"><i class="fa fa-pencil"></i></a>
