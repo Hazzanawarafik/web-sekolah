@@ -32,6 +32,11 @@
          <style>
 		.datepicker{z-index:1151;}
 	    </style>
+
+        <script src="<?= base_url(); ?>ckeditor/ckeditor.js"></script>
+	    <script src="<?= base_url(); ?>ckeditor/samples/js/sample.js"></script>
+        <link rel="stylesheet" href="<?= base_url(); ?>ckeditor/samples/css/samples.css">
+	    <link rel="stylesheet" href="<?= base_url(); ?>ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css">
 	    
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

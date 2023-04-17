@@ -20,7 +20,7 @@
             </div>
             <div class="form-group">
                 <label for="">Isi Berita</label>
-                <textarea name="isi_berita" id="" cols="30" rows="10" placeholder="Isi Berita"></textarea>
+                <textarea name="isi_berita" cols="30" rows="10" placeholder="Isi Berita" id="editor"></textarea>
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-priamry">Simpan</button>
