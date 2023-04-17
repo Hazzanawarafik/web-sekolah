@@ -9,7 +9,9 @@
                 echo '<div class="alert alert-danger alert-dismissible">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'.$error_uplaod.'</div>';
             }
-            echo form_open_multipart('guru/add') ?>
+            echo validation_errors('<div class="alert alert-warning alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>','</div>');
+            echo form_open_multipart('berita/add') ?>
             <div class="form-group">
                 <label for="">Judul Berita</label>
                 <input type="text" class="form-control" name="judul_berita" placeholder="Judul Berita" required>

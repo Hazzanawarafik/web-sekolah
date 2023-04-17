@@ -6,7 +6,7 @@
 CKEDITOR.editorConfig = function( config ) {
 	config.language = 'en';
 	config.uiColor = '#fc03b6';
-	config.height = 700;
+	config.height = 500;
 	config.toolbarCanCollapse = true;
 	// Define changes to default configuration here.
 	// For complete reference see:
