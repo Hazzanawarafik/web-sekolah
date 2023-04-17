@@ -30,6 +30,9 @@
                                 <a href="<?= base_url('pengumuman'); ?>"><i class="fa fa-file fa-fw"></i> Pengumuman</a>
                             </li>
                             <li>
+                                <a href="<?= base_url('berita'); ?>"><i class="fa fa-newspaper-o fa-fw"></i> Berita</a>
+                            </li>
+                            <li>
                                 <a href="<?= base_url('login/logout') ?>"><i class="fa fa-sign-out"></i> Logout</a>
                             </li>
                         </ul>
