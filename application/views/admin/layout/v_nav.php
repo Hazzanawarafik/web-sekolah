@@ -33,6 +33,9 @@
                                 <a href="<?= base_url('berita'); ?>"><i class="fa fa-newspaper-o fa-fw"></i> Berita</a>
                             </li>
                             <li>
+                                <a href="<?= base_url('gallery'); ?>"><i class="fa fa-image fa-fw"></i> Gallery</a>
+                            </li>
+                            <li>
                                 <a href="<?= base_url('login/logout') ?>"><i class="fa fa-sign-out"></i> Logout</a>
                             </li>
                         </ul>
