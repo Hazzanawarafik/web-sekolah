@@ -7,7 +7,7 @@
             <?php 
             if(isset($error_upload)){
                 echo '<div class="alert alert-danger alert-dismissible">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'.$error_uplaod.'</div>';
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'.$error_upload.'</div>';
             }
             echo form_open_multipart('guru/add') ?>
             <div class="form-group">

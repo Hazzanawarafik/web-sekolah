@@ -27,6 +27,7 @@
                         <tr>
                             <td><?= $no++; ?></td>
                             <td><?= $value->ket_file; ?></td>
+                            <td><?= $value->file; ?></td>
                             <td>
                                 <a href="<?= base_url('download/edit/'. $value->id_file); ?>" class="btn btn-xs btn-success"><i class="fa fa-pencil"></i></a>
                                 <a href="<?= base_url('download/delete/'. $value->id_file); ?>" onclick="return confirm('Apakah Data Ini Akan Dihapus..?')" class="btn btn-xs btn-danger"><i class="fa fa-trash"></i></a>
