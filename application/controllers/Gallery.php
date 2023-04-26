@@ -193,6 +193,21 @@ class Gallery extends CI_Controller {
         $this->load->view('admin/layout/v_wrapper',$data,FALSE);
     }
 
+    public function delete_foto($id_gallery,$id_foto){
+        // menghapus file foto lama
+        $foto= $this->m_gallery->detail_foto($id_foto);
+        if($foto->foto !=""){
+            unlink('./foto/'.$foto->foto);
+        }
+        // end menghapus foto
+        $data = array('id_foto' => $id_foto);
+        $this->m_gallery->delete_foto($data);
+        $this->session->set_flashdata('pesan','Foto berhasil di hapus !!!');
+        
+        redirect('gallery/add_foto/'.$id_gallery);
+        
+    }
+
 }
 
 /* End of file Gallery.php */

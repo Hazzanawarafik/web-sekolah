@@ -44,7 +44,7 @@
                     <label for=""><?= $value->ket_foto; ?></label>
                     <img src="<?= base_url('foto/'.$value->foto); ?>" alt="" width="100%" height="250px">
                     <br>
-                    <a href="" class="btn btn-danger btn-xs btn-block"><i class="fa fa-trash"></i></a>
+                    <a href="<?= base_url('gallery/delete_foto/'.$value->id_gallery.'/'.$value->id_foto); ?>" onclick="return confirm('Apakah Data Ini Akan Dihapus...?')" class="btn btn-danger btn-xs btn-block"><i class="fa fa-trash"></i></a>
                 </div>
             <?php endforeach ?>
         </div>
