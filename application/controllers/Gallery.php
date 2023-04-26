@@ -143,6 +143,56 @@ class Gallery extends CI_Controller {
         redirect('gallery','refresh');
     }
 
+    public function add_foto($id_gallery){
+        $this->form_validation->set_rules('ket_foto', 'Nama Gallery', 'Required');
+        
+        if ($this->form_validation->run() == TRUE) {
+            $config['upload_path']          = './foto/';
+            $config['allowed_types']        = 'gif|jpg|png|jpeg';
+            $config['max_size']             = 2000;
+
+            $this->upload->initialize($config);
+            if(!$this->upload->do_upload('foto'))
+            {
+                $gallery = $this->m_gallery->detail($id_gallery);
+                $data = array(
+                    'title' => 'SMKN 4 SMG',
+                    'title2' => 'Add Foto Gallery : '.$gallery->nama_gallery,
+                    'error' => $this->upload->display_errors(),
+                    'gallery' => $gallery,
+                    'foto' => $this->m_gallery->list_foto($id_gallery),
+                    'isi' => 'admin/gallery/v_add_foto',
+                );
+                $this->load->view('admin/layout/v_wrapper',$data,FALSE);
+            }
+            else
+            {
+                $upload_data = array('uploads' => $this->upload->data());
+                $config['image_library'] = 'gd2';
+                $config['source_image'] = './foto/'.$upload_data['uploads']['file_name'];
+                $this->load->library('image_lib',$config);
+
+                $data = array(
+                    'id_gallery' => $id_gallery,
+                    'ket_foto' => $this->input->post('ket_foto'),
+                    'foto' => $upload_data['uploads']['file_name']
+                );
+                $this->m_gallery->add_foto($data);
+                $this->session->set_flashdata('pesan','Foto Berhasil Di Tambahkan !!!');
+                redirect('gallery/add_foto/'.$id_gallery);
+            }
+        }
+        $gallery = $this->m_gallery->detail($id_gallery);
+        $data = array(
+            'title' => 'SMKN 4 SMG',
+            'title2' => 'Add Foto Gallery : '.$gallery->nama_gallery,
+            'gallery' => $gallery,
+            'foto' => $this->m_gallery->lists_foto($id_gallery),
+            'isi' => 'admin/gallery/v_add_foto'
+        );
+        $this->load->view('admin/layout/v_wrapper',$data,FALSE);
+    }
+
 }
 
 /* End of file Gallery.php */

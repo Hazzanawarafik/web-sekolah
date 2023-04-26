@@ -14,8 +14,21 @@ class M_gallery extends CI_Model {
         
     }
 
+    public function lists_foto($id_gallery){
+        $this->db->select('*');
+        $this->db->from('tbl_foto');
+        $this->db->where('id_gallery', $id_gallery);
+        $this->db->order_by('id_foto', 'desc');
+        return $this->db->get()->result();
+    }
+
     public function add($data){
         $this->db->insert('tbl_gallery', $data);
+        
+    }
+
+    public function add_foto($data){
+        $this->db->insert('tbl_foto', $data);
         
     }
 
