@@ -29,6 +29,15 @@ class Home extends CI_Controller {
         );
         $this->load->view('layout/v_wrapper',$data,FALSE);
     }
+    
+    public function guru(){
+        $data = array(
+            'title' => 'Guru',
+            'guru' =>  $this->m_home->guru(),
+            'isi'   => 'v_guru'
+        );
+        $this->load->view('layout/v_wrapper',$data,FALSE);
+    }
 
 }
 
