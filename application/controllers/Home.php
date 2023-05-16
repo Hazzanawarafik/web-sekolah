@@ -77,6 +77,15 @@ class Home extends CI_Controller {
         );
         $this->load->view('layout/v_wrapper',$data,FALSE);
     }
+    public function detail_berita($slug_berita){
+        $data = array(
+            'title' => 'Detail Berita',
+            'berita' => $this->m_home->detail_berita($slug_berita),
+            'isi' => 'v_detail_berita'
+        );
+        $this->load->view('layout/v_wrapper', $data, FALSE);
+        
+    }
 
 }
 

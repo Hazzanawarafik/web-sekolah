@@ -38,7 +38,7 @@
                                         src="<?= base_url('gambar_berita/'.$value->gambar_berita); ?>" alt=""></div>
                                 <div class="course_body">
                                     <h3 class="course_title"><a
-                                            href="course.html"><?= substr(strip_tags($value->judul_berita),0,25); ?>...</a>
+                                            href="<?= base_url('home/detail_berita/'.$value->slug_berita); ?>"><?= substr(strip_tags($value->judul_berita),0,25); ?>...</a>
                                     </h3>
                                     <div class="course_teacher">User : <?= $value->nama_user; ?></div>
                                     <div class="course_text">

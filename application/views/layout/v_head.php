@@ -27,6 +27,9 @@
     <link href="<?= base_url(); ?>template/front-end/plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>template/front-end/styles/courses.css">
     <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>template/front-end/styles/courses_responsive.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>template/front-end/styles/blog_single.css">
+    <link rel="stylesheet" type="text/css"
+        href="<?= base_url(); ?>template/front-end/styles/blog_single_responsive.css">
 
 
 
