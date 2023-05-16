@@ -28,7 +28,7 @@
                             </li>
                             <li><a href="#">Galeri</a></li>
                             <li><a href="<?= base_url('home/download'); ?>">Download</a></li>
-                            <li><a href="#">Berita</a></li>
+                            <li><a href="<?= base_url('home/berita'); ?>">Berita</a></li>
                             <li><a href="#">About</a></li>
                         </ul>
 

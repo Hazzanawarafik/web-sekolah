@@ -24,6 +24,10 @@
     <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>template/front-end/styles/contact.css">
     <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>template/front-end/styles/contact_responsive.css">
 
+    <link href="<?= base_url(); ?>template/front-end/plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>template/front-end/styles/courses.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>template/front-end/styles/courses_responsive.css">
+
 
 
 

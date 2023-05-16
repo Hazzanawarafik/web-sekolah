@@ -134,6 +134,8 @@
 	<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
 	<script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap4.min.js"></script>
 	<script src="<?= base_url(); ?>template/front-end/js/contact.js"></script>
+	<script src="<?= base_url(); ?>template/front-end/plugins/colorbox/jquery.colorbox-min.js"></script>
+	<script src="<?= base_url(); ?>template/front-end/js/courses.js"></script>
 	<script>
 $(document).ready(function() {
     $('#example').DataTable();
