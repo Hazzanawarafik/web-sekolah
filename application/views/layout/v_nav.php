@@ -5,13 +5,13 @@
             <div class="col">
                 <div class="header_content d-flex flex-row align-items-center justify-content-start">
                     <div class="logo_container">
-                        <a href="#">
+                        <a href="<?= base_url(); ?>">
                             <div class="logo_text">SMK 4<span> SMG</span></div>
                         </a>
                     </div>
                     <nav class="main_nav_contaner ml-auto">
                         <ul class="main_nav">
-                            <li class="active"><a href="#">Home</a></li>
+                            <li class="active"><a href="<?= base_url(); ?>">Home</a></li>
 
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"

@@ -33,7 +33,7 @@
                             <li>By <a href="#"><?= $berita->nama_user; ?></a></li>
                         </ul>
                     </div>
-                    <div class="blog_image"><img src="<?= base_url('gambar_berita/'.$berita->judul_berita); ?>" alt="">
+                    <div class="blog_image"><img src="<?= base_url('gambar_berita/'.$berita->gambar_berita); ?>" alt="">
                     </div>
                     <p><?= $berita->isi_berita; ?></p>
 
@@ -47,44 +47,24 @@
 
                     <!-- Latest News -->
                     <div class="sidebar_section">
-                        <div class="sidebar_section_title">Latest Courses</div>
+                        <div class="sidebar_section_title">Latest News</div>
                         <div class="sidebar_latest">
 
+                            <?php foreach($latest_berita as $key => $value) : ?>
                             <!-- Latest Course -->
                             <div class="latest d-flex flex-row align-items-start justify-content-start">
                                 <div class="latest_image">
-                                    <div><img src="images/latest_1.jpg" alt=""></div>
-                                </div>
-                                <div class="latest_content">
-                                    <div class="latest_title"><a href="course.html">How to Design a Logo a Beginners
-                                            Course</a></div>
-                                    <div class="latest_date">november 11, 2017</div>
-                                </div>
-                            </div>
-
-                            <!-- Latest Course -->
-                            <div class="latest d-flex flex-row align-items-start justify-content-start">
-                                <div class="latest_image">
-                                    <div><img src="images/latest_2.jpg" alt=""></div>
-                                </div>
-                                <div class="latest_content">
-                                    <div class="latest_title"><a href="course.html">Photography for Beginners
-                                            Masterclass</a></div>
-                                    <div class="latest_date">november 11, 2017</div>
-                                </div>
-                            </div>
-
-                            <!-- Latest Course -->
-                            <div class="latest d-flex flex-row align-items-start justify-content-start">
-                                <div class="latest_image">
-                                    <div><img src="images/latest_3.jpg" alt=""></div>
-                                </div>
-                                <div class="latest_content">
-                                    <div class="latest_title"><a href="course.html">The Secrets of Body Language</a>
+                                    <div><img src="<?= base_url('gambar_berita/'.$value->gambar_berita); ?>" alt="">
                                     </div>
-                                    <div class="latest_date">november 11, 2017</div>
+                                </div>
+                                <div class="latest_content">
+                                    <div class="latest_title"><a
+                                            href="<?= base_url('home/detail_berita/'.$value->slug_berita); ?>"><?= $value->judul_berita; ?></a>
+                                    </div>
+                                    <div class="latest_date"><?= $value->tgl_berita; ?></div>
                                 </div>
                             </div>
+                            <?php endforeach ?>
 
                         </div>
                     </div>

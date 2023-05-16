@@ -41,6 +41,14 @@ class M_home extends CI_Model {
         $this->db->where('slug_berita', $slug_berita);
         return $this->db->get()->row();
     }
+    public function latest_berita(){
+        $this->db->select('*');
+        $this->db->from('tbl_berita');
+        $this->db->join('tbl_user', 'tbl_user.id_user = tbl_berita.id_user', 'left');
+        $this->db->order_by('id_berita', 'desc');
+        $this->db->limit(7);
+        return $this->db->get()->result();
+    }
 }
 
 /* End of file M_home.php */

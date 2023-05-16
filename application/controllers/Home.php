@@ -70,10 +70,11 @@ class Home extends CI_Controller {
         //..................................
         $this->pagination->initialize($config);
         $data = array(
-            'paginasi' => $this->pagination->create_links(),
-            'berita' => $this->m_home->berita($limit,$start),
-            'title' => 'Berita',
-            'isi'   => 'v_berita'
+            'paginasi'      => $this->pagination->create_links(),
+            'latest_berita' => $this->m_home->latest_berita(),
+            'berita'        => $this->m_home->berita($limit,$start),
+            'title'         => 'Berita',
+            'isi'           => 'v_berita'
         );
         $this->load->view('layout/v_wrapper',$data,FALSE);
     }
@@ -81,6 +82,7 @@ class Home extends CI_Controller {
         $data = array(
             'title' => 'Detail Berita',
             'berita' => $this->m_home->detail_berita($slug_berita),
+            'latest_berita' => $this->m_home->latest_berita(),
             'isi' => 'v_detail_berita'
         );
         $this->load->view('layout/v_wrapper', $data, FALSE);
