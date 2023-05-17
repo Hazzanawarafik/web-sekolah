@@ -49,6 +49,14 @@ class M_home extends CI_Model {
         $this->db->limit(7);
         return $this->db->get()->result();
     }
+    public function gallery(){
+        $this->db->select('tbl_gallery.*,count(tbl_foto.id_gallery) as jml_foto');
+        $this->db->from('tbl_gallery');
+        $this->db->join('tbl_foto', 'tbl_foto.id_gallery = tbl_gallery.id_gallery', 'left');
+        $this->db->group_by('tbl_gallery.id_gallery');
+        $this->db->order_by('tbl_gallery.id_gallery', 'desc');
+        return $this->db->get()->result();
+    }
 }
 
 /* End of file M_home.php */

@@ -11,7 +11,6 @@ class M_gallery extends CI_Model {
         $this->db->group_by('tbl_gallery.id_gallery');
         $this->db->order_by('tbl_gallery.id_gallery', 'desc');
         return $this->db->get()->result();
-        
     }
 
     public function lists_foto($id_gallery){

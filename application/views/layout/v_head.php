@@ -21,4 +21,6 @@
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>template/front-end/styles/blog_single.css">
     <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>template/front-end/styles/blog_single_responsive.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>template/front-end/styles/about.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>template/front-end/styles/about_responsive.css">
 </head>

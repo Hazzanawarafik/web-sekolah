@@ -137,6 +137,7 @@
 	<script src="<?= base_url(); ?>template/front-end/plugins/colorbox/jquery.colorbox-min.js"></script>
 	<script src="<?= base_url(); ?>template/front-end/js/courses.js"></script>
 	<script src="<?= base_url(); ?>template/front-end/js/blog_single.js"></script>
+	<script src="<?= base_url(); ?>template/front-end/js/about.js"></script>
 	<script>
 $(document).ready(function() {
     $('#example').DataTable();
