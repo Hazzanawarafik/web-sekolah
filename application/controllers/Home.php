@@ -18,7 +18,7 @@ class Home extends CI_Controller {
             'title' => 'Web Sekolah',
             'isi'   => 'v_home'
         );
-        $this->load->view('layout/v_wrapper',$data,FALSE);
+        $this->load->view('layout/v_wrapperhome',$data,FALSE);
     }
 
     public function download(){
