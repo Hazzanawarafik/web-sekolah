@@ -6,7 +6,7 @@
                 <div class="header_content d-flex flex-row align-items-center justify-content-start">
                     <div class="logo_container">
                         <a href="<?= base_url(); ?>">
-                            <div class="logo_text">SMK 4<span> SMG</span></div>
+                            <div class="logo_text"><span><?= $setting->nama_sekolah; ?></span></div>
                         </a>
                     </div>
                     <nav class="main_nav_contaner ml-auto">

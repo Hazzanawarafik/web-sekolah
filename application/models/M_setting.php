@@ -10,7 +10,10 @@ class M_setting extends CI_Model {
         $this->db->where('id', 1);
         return $this->db->get()->row();
     }
-
+    public function save_setting($data){
+        $this->db->where('id', $data['id']);
+        $this->db->update('tbl_setting', $data);
+    }
 }
 
 /* End of file M_setting.php */

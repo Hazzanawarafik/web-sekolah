@@ -1,11 +1,11 @@
 <body>
-
+<?php $setting = $this->m_setting->detail(); ?>
     <div id="wrapper">
 
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="navbar-header">
-                <a class="navbar-brand" href="<?= base_url(); ?>"><?= $title; ?></a>
+                <a class="navbar-brand" href="<?= base_url(); ?>"><?= $setting->nama_sekolah; ?></a>
             </div>
 
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">

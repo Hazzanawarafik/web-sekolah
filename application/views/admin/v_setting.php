@@ -1,3 +1,13 @@
+<?php 
+    echo form_open_multipart('admin/setting'); 
+    if($this->session->flashdata('pesan')){
+        echo '<div class="alert alert-success alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        ';
+        echo $this->session->flashdata('pesan');
+        echo '</div>';
+    }
+?>
 <div class="col-sm-4">
     <label for="">Foto Kepala Sekolah</label>
     <img src="<?= base_url('foto_kepsek/'.$setting->foto_kepsek); ?>" width="150px" height="200px" alt="">
@@ -19,7 +29,7 @@
     </div>
     <div class="form-group">
         <label for="">No Telepon</label>
-        <input type="text" class="form-control" value="<?= $setting->no_telepon; ?>" name="no_telpon">
+        <input type="text" class="form-control" value="<?= $setting->no_telepon; ?>" name="no_telepon">
     </div>
     <div class="form-group">
         <label for="">Kepala Sekolah</label>
@@ -44,6 +54,7 @@
         <textarea name="misi" class="form-control" id="" cols="30" rows="10"><?= $setting->misi; ?></textarea>
     </div>
     <div class="form-group">
-        <button class="btn btn-success btn-sm">Update</button>
+        <button type="submit" class="btn btn-success btn-sm">Update</button>
     </div>
 </div>
+<?php echo form_close(); ?>
