@@ -70,6 +70,12 @@ class M_home extends CI_Model {
         $this->db->where('id_gallery', $id_gallery);
         return $this->db->get()->row();
     }
+    public function siswa(){
+        $this->db->select('*');
+        $this->db->from('tbl_siswa');
+        $this->db->order_by('id_siswa', 'desc');
+        return $this->db->get()->result();
+    }
 }
 
 /* End of file M_home.php */

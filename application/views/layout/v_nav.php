@@ -23,7 +23,7 @@
                                     <a class="dropdown-item" href="#">Visi Misi</a>
                                     <a class="dropdown-item" href="#">Kepala Sekolah</a>
                                     <a class="dropdown-item" href="<?= base_url('home/guru'); ?>">Guru</a>
-                                    <a class="dropdown-item" href="#">Siswa</a>
+                                    <a class="dropdown-item" href="<?= base_url('home/siswa'); ?>">Siswa</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="#">Something else here</a>
                                 </div>
