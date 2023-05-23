@@ -39,6 +39,9 @@
                                 <a href="<?= base_url('download') ?>"><i class="fa fa-download fa-fw"></i> Download</a>
                             </li>
                             <li>
+                                <a href="<?= base_url('admin/setting') ?>"><i class="fa fa-gear fa-fw"></i> Setting</a>
+                            </li>
+                            <li>
                                 <a href="<?= base_url('login/logout') ?>"><i class="fa fa-sign-out"></i> Logout</a>
                             </li>
                         </ul>
