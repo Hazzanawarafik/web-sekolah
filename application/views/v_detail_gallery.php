@@ -24,7 +24,7 @@
 			<div class="row">
 				<div class="col">
 					<div class="section_title_container text-center">
-						<h2 class="section_title">Welcome To Gallery</h2>
+						<h2 class="section_title"><?= $nama_gallery->nama_gallery; ?></h2>
 					</div>
 				</div>
 			</div>
@@ -33,11 +33,8 @@
                     <!-- About Item -->
                     <div class="col-lg-4 about_col about_col_left">
                         <div class="about_item">
-                            <div class="about_item_image"><img src="<?= base_url('sampul/'.$value->sampul); ?>" alt="" width="250px" height="180px"></div>
-                            <div class="about_item_title"><a href="<?= base_url('home/detail_gallery/'.$value->id_gallery); ?>"><?= $value->nama_gallery; ?></a></div>
-                            <div class="about_item_text">
-                                Jumlah : <?= $value->jml_foto; ?>
-                            </div>
+                            <div class="about_item_image"><img src="<?= base_url('foto/'.$value->foto); ?>" alt="" width="350px" height="280px"></div>
+                            <div class="about_item_title"><a href=""><?= $value->ket_foto; ?></a></div>
                         </div>
                     </div>
                 <?php endforeach ?>

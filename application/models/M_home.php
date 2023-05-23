@@ -57,6 +57,19 @@ class M_home extends CI_Model {
         $this->db->order_by('tbl_gallery.id_gallery', 'desc');
         return $this->db->get()->result();
     }
+    public function detail_gallery($id_gallery){
+        $this->db->select('*');
+        $this->db->from('tbl_foto');
+        $this->db->where('id_gallery',$id_gallery);
+        $this->db->order_by('id_foto','desc');
+        return $this->db->get()->result();
+    }
+    public function nama_gallery($id_gallery){
+        $this->db->select('*');
+        $this->db->from('tbl_gallery');
+        $this->db->where('id_gallery', $id_gallery);
+        return $this->db->get()->row();
+    }
 }
 
 /* End of file M_home.php */

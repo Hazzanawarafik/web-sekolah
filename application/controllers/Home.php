@@ -95,6 +95,15 @@ class Home extends CI_Controller {
         );
         $this->load->view('layout/v_wrapper',$data,FALSE);
     }
+    public function detail_gallery($id_gallery){
+        $data = array(
+            'title'         => 'Detail Gallery Foto',
+            'gallery'       => $this->m_home->detail_gallery($id_gallery),
+            'nama_gallery'  => $this->m_home->nama_gallery($id_gallery),
+            'isi'           => 'v_detail_gallery'
+        );
+        $this->load->view('layout/v_wrapper',$data,FALSE);
+    }
 }
 
 /* End of file Home.php */
