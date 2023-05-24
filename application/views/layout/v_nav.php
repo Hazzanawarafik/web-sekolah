@@ -29,7 +29,7 @@
                             <li><a href="<?= base_url('home/gallery'); ?>">Galleri</a></li>
                             <li><a href="<?= base_url('home/download'); ?>">Download</a></li>
                             <li><a href="<?= base_url('home/berita'); ?>">Berita</a></li>
-                            <li><a href="#">About</a></li>
+                            <li><a href="<?= base_url('home/about'); ?>">About</a></li>
                         </ul>
 
                         <!-- Hamburger -->
