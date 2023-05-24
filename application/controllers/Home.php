@@ -112,6 +112,14 @@ class Home extends CI_Controller {
         );
         $this->load->view('layout/v_wrapper',$data,FALSE);
     }
+    public function profile(){
+        $data = array(
+            'title' => 'Profile Sekolah',
+            'sekolah' => $this->m_setting->detail(),
+            'isi'   => 'v_profile'
+        );
+        $this->load->view('layout/v_wrapper',$data,FALSE);
+    }
 }
 
 /* End of file Home.php */

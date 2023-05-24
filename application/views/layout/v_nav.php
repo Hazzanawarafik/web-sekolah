@@ -19,6 +19,7 @@
                                     Sekolah
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="<?= base_url('home/profile'); ?>">Profile</a>
                                     <a class="dropdown-item" href="<?= base_url('home/guru'); ?>">Guru</a>
                                     <a class="dropdown-item" href="<?= base_url('home/siswa'); ?>">Siswa</a>
                                     <div class="dropdown-divider"></div>
