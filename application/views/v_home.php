@@ -5,39 +5,24 @@
 			
 			<!-- Home Slider -->
 			<div class="owl-carousel owl-theme home_slider">
-				
-				<!-- Home Slider Item -->
+				<?php foreach($berita as $key => $value) : ?>
+					<!-- Home Slider Item -->
 				<div class="owl-item">
-					<div class="home_slider_background" style="background-image:url(<?= base_url(); ?>template/front-end/images/home_slider_1.jpg)"></div>
+					<div class="home_slider_background" style="background-image:url(<?= base_url('gambar_berita/'.$value->gambar_berita); ?>)"></div>
 					<div class="home_slider_content">
 						<div class="container">
 							<div class="row">
 								<div class="col text-center">
-									<div class="home_slider_title">The Premium System Education</div>
-									<div class="home_slider_subtitle">Future Of Education Technology</div>
+									<div class="home_slider_title"><a href="<?= base_url('home/detail_berita/'.$value->slug_berita); ?>"><?= $value->judul_berita; ?></a></div>
+									<div class="home_slider_subtitle"><p><?= substr(strip_tags($value->isi_berita),0,200); ?>..</p></div>
 									<div class="home_slider_form_container">
-										<form action="#" id="home_search_form_1" class="home_search_form d-flex flex-lg-row flex-column align-items-center justify-content-between">
-											<div class="d-flex flex-row align-items-center justify-content-start">
-												<input type="search" class="home_search_input" placeholder="Keyword Search" required="required">
-												<select class="dropdown_item_select home_search_input">
-													<option>Category Courses</option>
-													<option>Category</option>
-													<option>Category</option>
-												</select>
-												<select class="dropdown_item_select home_search_input">
-													<option>Select Price Type</option>
-													<option>Price Type</option>
-													<option>Price Type</option>
-												</select>
-											</div>
-											<button type="submit" class="home_search_button">search</button>
-										</form>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+				<?php endforeach ?>
 
 				<!-- Home Slider Item -->
 				<div class="owl-item">
@@ -176,98 +161,39 @@
 			<div class="row">
 				<div class="col">
 					<div class="section_title_container text-center">
-						<h2 class="section_title">Popular Online Courses</h2>
+						<h2 class="section_title">Latest News</h2>
 						<div class="section_subtitle"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel gravida arcu. Vestibulum feugiat, sapien ultrices fermentum congue, quam velit venenatis sem</p></div>
 					</div>
 				</div>
 			</div>
 			<div class="row courses_row">
-				
+				<?php foreach($berita as $key => $value) : ?>				
 				<!-- Course -->
 				<div class="col-lg-4 course_col">
 					<div class="course">
-						<div class="course_image"><img src="<?= base_url(); ?>template/front-end/images/course_1.jpg" alt=""></div>
+						<div class="course_image"><img src="<?= base_url('gambar_berita/'.$value->gambar_berita); ?>" alt=""></div>
 						<div class="course_body">
-							<h3 class="course_title"><a href="course.html">Software Training</a></h3>
-							<div class="course_teacher">Mr. John Taylor</div>
+							<h3 class="course_title"><a href="<?= base_url('home/detail_berita/'.$value->slug_berita); ?>"><?= $value->judul_berita; ?></a></h3>
+							<div class="course_teacher">User : <?= $value->nama_user; ?></div>
 							<div class="course_text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipi elitsed do eiusmod tempor</p>
+								<p><?= substr(strip_tags($value->isi_berita),0,200); ?>..</p>
 							</div>
 						</div>
 						<div class="course_footer">
 							<div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
 								<div class="course_info">
-									<i class="fa fa-graduation-cap" aria-hidden="true"></i>
-									<span>20 Student</span>
+									<i class="fa fa-calendar" aria-hidden="true"></i>
+									<span> <?= $value->tgl_berita; ?></span>
 								</div>
-								<div class="course_info">
-									<i class="fa fa-star" aria-hidden="true"></i>
-									<span>5 Ratings</span>
-								</div>
-								<div class="course_price ml-auto">$130</div>
 							</div>
 						</div>
 					</div>
 				</div>
-
-				<!-- Course -->
-				<div class="col-lg-4 course_col">
-					<div class="course">
-						<div class="course_image"><img src="<?= base_url(); ?>template/front-end/images/course_2.jpg" alt=""></div>
-						<div class="course_body">
-							<h3 class="course_title"><a href="course.html">Developing Mobile Apps</a></h3>
-							<div class="course_teacher">Ms. Lucius</div>
-							<div class="course_text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipi elitsed do eiusmod tempor</p>
-							</div>
-						</div>
-						<div class="course_footer">
-							<div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
-								<div class="course_info">
-									<i class="fa fa-graduation-cap" aria-hidden="true"></i>
-									<span>20 Student</span>
-								</div>
-								<div class="course_info">
-									<i class="fa fa-star" aria-hidden="true"></i>
-									<span>5 Ratings</span>
-								</div>
-								<div class="course_price ml-auto">Free</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Course -->
-				<div class="col-lg-4 course_col">
-					<div class="course">
-						<div class="course_image"><img src="<?= base_url(); ?>template/front-end/images/course_3.jpg" alt=""></div>
-						<div class="course_body">
-							<h3 class="course_title"><a href="course.html">Starting a Startup</a></h3>
-							<div class="course_teacher">Mr. Charles</div>
-							<div class="course_text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipi elitsed do eiusmod tempor</p>
-							</div>
-						</div>
-						<div class="course_footer">
-							<div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
-								<div class="course_info">
-									<i class="fa fa-graduation-cap" aria-hidden="true"></i>
-									<span>20 Student</span>
-								</div>
-								<div class="course_info">
-									<i class="fa fa-star" aria-hidden="true"></i>
-									<span>5 Ratings</span>
-								</div>
-								<div class="course_price ml-auto"><span>$320</span>$220</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
+				<?php endforeach ?>
 			</div>
 			<div class="row">
 				<div class="col">
-					<div class="courses_button trans_200"><a href="#">view all courses</a></div>
+					<div class="courses_button trans_200"><a href="<?= base_url('home/berita'); ?>">view all courses</a></div>
 				</div>
 			</div>
 		</div>
@@ -442,20 +368,22 @@
 			<div class="row">
 				<div class="col">
 					<div class="section_title_container text-center">
-						<h2 class="section_title">The Best Tutors in Town</h2>
-						<div class="section_subtitle"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel gravida arcu. Vestibulum feugiat, sapien ultrices fermentum congue, quam velit venenatis sem</p></div>
+						<h2 class="section_title">Guru Sekolah</h2>
 					</div>
 				</div>
 			</div>
 			<div class="row team_row">
-				
+				<?php foreach($guru as $key => $value) : ?>
 				<!-- Team Item -->
 				<div class="col-lg-3 col-md-6 team_col">
 					<div class="team_item">
-						<div class="team_image"><img src="<?= base_url(); ?>template/front-end/images/team_1.jpg" alt=""></div>
+						<div class="team_image"><img src="<?= base_url('foto_guru/'.$value->foto_guru); ?>" alt=""></div>
 						<div class="team_body">
-							<div class="team_title"><a href="#">Jacke Masito</a></div>
-							<div class="team_subtitle">Marketing & Management</div>
+							<div class="team_subtitle"><?= $value->nip; ?></div>
+							<div class="team_title"><a href="#"><?= $value->nama_guru; ?></a></div>
+							<div class="team_subtitle"><?= $value->tempat_lahir; ?>, <?= $value->tgl_lahir; ?></div>
+							<div class="team_subtitle"><?= $value->nama_mapel; ?></div>
+							<div class="team_subtitle"><?= $value->pendidikan; ?></div>
 							<div class="social_list">
 								<ul>
 									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -466,61 +394,7 @@
 						</div>
 					</div>
 				</div>
-
-				<!-- Team Item -->
-				<div class="col-lg-3 col-md-6 team_col">
-					<div class="team_item">
-						<div class="team_image"><img src="<?= base_url(); ?>template/front-end/images/team_2.jpg" alt=""></div>
-						<div class="team_body">
-							<div class="team_title"><a href="#">William James</a></div>
-							<div class="team_subtitle">Designer & Website</div>
-							<div class="social_list">
-								<ul>
-									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Team Item -->
-				<div class="col-lg-3 col-md-6 team_col">
-					<div class="team_item">
-						<div class="team_image"><img src="<?= base_url(); ?>template/front-end/images/team_3.jpg" alt=""></div>
-						<div class="team_body">
-							<div class="team_title"><a href="#">John Tyler</a></div>
-							<div class="team_subtitle">Quantum mechanics</div>
-							<div class="social_list">
-								<ul>
-									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Team Item -->
-				<div class="col-lg-3 col-md-6 team_col">
-					<div class="team_item">
-						<div class="team_image"><img src="<?= base_url(); ?>template/front-end/images/team_4.jpg" alt=""></div>
-						<div class="team_body">
-							<div class="team_title"><a href="#">Veronica Vahn</a></div>
-							<div class="team_subtitle">Math & Physics</div>
-							<div class="social_list">
-								<ul>
-									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-
+				<?php endforeach ?>
 			</div>
 		</div>
 	</div>

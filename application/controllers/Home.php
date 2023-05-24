@@ -9,6 +9,8 @@ class Home extends CI_Controller {
     {
         parent::__construct();
         $this->load->model('m_home');
+        $this->load->model('m_guru');
+        
     }
     
 
@@ -16,6 +18,8 @@ class Home extends CI_Controller {
     {
         $data = array(
             'title' => 'Web Sekolah',
+            'berita'=> $this->m_home->slider_berita(),
+            'guru'  => $this->m_guru->lists(),
             'isi'   => 'v_home'
         );
         $this->load->view('layout/v_wrapperhome',$data,FALSE);
